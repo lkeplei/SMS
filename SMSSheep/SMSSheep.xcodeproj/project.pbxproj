@@ -11,7 +11,12 @@
 		40F1ECA722674E450057CA91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECA622674E450057CA91 /* main.m */; };
 		40F1ECB522674F420057CA91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECB022674F410057CA91 /* AppDelegate.m */; };
 		40F1ECB622674F420057CA91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40F1ECB322674F420057CA91 /* Assets.xcassets */; };
-		40F1ECB922674FDE0057CA91 /* SMSHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECB822674FDE0057CA91 /* SMSHomeVC.m */; };
+		40F1ECE722680F1C0057CA91 /* PredictSMS.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECBA22680F1C0057CA91 /* PredictSMS.mlmodel */; };
+		40F1ECE822680F1C0057CA91 /* SMSHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECBC22680F1C0057CA91 /* SMSHomeVC.m */; };
+		40F1ECE922680F1C0057CA91 /* iosjieba.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 40F1ECC022680F1C0057CA91 /* iosjieba.bundle */; };
+		40F1ECEA22680F1C0057CA91 /* feature.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40F1ECE622680F1C0057CA91 /* feature.txt */; };
+		40F1ECED226810C30057CA91 /* ObjcJiebaWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECEC226810C30057CA91 /* ObjcJiebaWrapper.mm */; };
+		40F1ECF0226815A40057CA91 /* SMSPredict.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECEF226815A40057CA91 /* SMSPredict.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +27,50 @@
 		40F1ECAE22674F410057CA91 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		40F1ECB022674F410057CA91 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		40F1ECB322674F420057CA91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		40F1ECB722674FDE0057CA91 /* SMSHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSHomeVC.h; sourceTree = "<group>"; };
-		40F1ECB822674FDE0057CA91 /* SMSHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSHomeVC.m; sourceTree = "<group>"; };
+		40F1ECBA22680F1C0057CA91 /* PredictSMS.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PredictSMS.mlmodel; sourceTree = "<group>"; };
+		40F1ECBC22680F1C0057CA91 /* SMSHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSHomeVC.m; sourceTree = "<group>"; };
+		40F1ECBD22680F1C0057CA91 /* SMSHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSHomeVC.h; sourceTree = "<group>"; };
+		40F1ECC022680F1C0057CA91 /* iosjieba.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iosjieba.bundle; sourceTree = "<group>"; };
+		40F1ECC222680F1C0057CA91 /* DictTrie.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DictTrie.hpp; sourceTree = "<group>"; };
+		40F1ECC322680F1C0057CA91 /* Unicode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Unicode.hpp; sourceTree = "<group>"; };
+		40F1ECC422680F1C0057CA91 /* PreFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PreFilter.hpp; sourceTree = "<group>"; };
+		40F1ECC522680F1C0057CA91 /* FullSegment.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FullSegment.hpp; sourceTree = "<group>"; };
+		40F1ECC622680F1C0057CA91 /* MixSegment.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MixSegment.hpp; sourceTree = "<group>"; };
+		40F1ECC722680F1C0057CA91 /* MPSegment.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MPSegment.hpp; sourceTree = "<group>"; };
+		40F1ECC822680F1C0057CA91 /* KeywordExtractor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KeywordExtractor.hpp; sourceTree = "<group>"; };
+		40F1ECC922680F1C0057CA91 /* Jieba.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Jieba.hpp; sourceTree = "<group>"; };
+		40F1ECCA22680F1C0057CA91 /* TextRankExtractor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TextRankExtractor.hpp; sourceTree = "<group>"; };
+		40F1ECCB22680F1C0057CA91 /* PosTagger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PosTagger.hpp; sourceTree = "<group>"; };
+		40F1ECCC22680F1C0057CA91 /* Trie.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trie.hpp; sourceTree = "<group>"; };
+		40F1ECCE22680F1C0057CA91 /* ThreadPool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ThreadPool.hpp; sourceTree = "<group>"; };
+		40F1ECCF22680F1C0057CA91 /* Colors.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Colors.hpp; sourceTree = "<group>"; };
+		40F1ECD022680F1C0057CA91 /* StdExtension.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StdExtension.hpp; sourceTree = "<group>"; };
+		40F1ECD122680F1C0057CA91 /* StringUtil.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StringUtil.hpp; sourceTree = "<group>"; };
+		40F1ECD222680F1C0057CA91 /* LocalVector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LocalVector.hpp; sourceTree = "<group>"; };
+		40F1ECD322680F1C0057CA91 /* BlockingQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BlockingQueue.hpp; sourceTree = "<group>"; };
+		40F1ECD422680F1C0057CA91 /* Closure.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Closure.hpp; sourceTree = "<group>"; };
+		40F1ECD522680F1C0057CA91 /* Config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Config.hpp; sourceTree = "<group>"; };
+		40F1ECD622680F1C0057CA91 /* ForcePublic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ForcePublic.hpp; sourceTree = "<group>"; };
+		40F1ECD722680F1C0057CA91 /* BoundedQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BoundedQueue.hpp; sourceTree = "<group>"; };
+		40F1ECD822680F1C0057CA91 /* ArgvContext.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArgvContext.hpp; sourceTree = "<group>"; };
+		40F1ECD922680F1C0057CA91 /* Condition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Condition.hpp; sourceTree = "<group>"; };
+		40F1ECDA22680F1C0057CA91 /* Md5.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Md5.hpp; sourceTree = "<group>"; };
+		40F1ECDB22680F1C0057CA91 /* Thread.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Thread.hpp; sourceTree = "<group>"; };
+		40F1ECDC22680F1C0057CA91 /* MutexLock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MutexLock.hpp; sourceTree = "<group>"; };
+		40F1ECDD22680F1C0057CA91 /* FileLock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileLock.hpp; sourceTree = "<group>"; };
+		40F1ECDE22680F1C0057CA91 /* Logging.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Logging.hpp; sourceTree = "<group>"; };
+		40F1ECDF22680F1C0057CA91 /* NonCopyable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NonCopyable.hpp; sourceTree = "<group>"; };
+		40F1ECE022680F1C0057CA91 /* BoundedBlockingQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BoundedBlockingQueue.hpp; sourceTree = "<group>"; };
+		40F1ECE122680F1C0057CA91 /* QuerySegment.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = QuerySegment.hpp; sourceTree = "<group>"; };
+		40F1ECE222680F1C0057CA91 /* SegmentTagged.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SegmentTagged.hpp; sourceTree = "<group>"; };
+		40F1ECE322680F1C0057CA91 /* HMMModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HMMModel.hpp; sourceTree = "<group>"; };
+		40F1ECE422680F1C0057CA91 /* SegmentBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SegmentBase.hpp; sourceTree = "<group>"; };
+		40F1ECE522680F1C0057CA91 /* HMMSegment.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HMMSegment.hpp; sourceTree = "<group>"; };
+		40F1ECE622680F1C0057CA91 /* feature.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = feature.txt; sourceTree = "<group>"; };
+		40F1ECEB226810C30057CA91 /* ObjcJiebaWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjcJiebaWrapper.h; sourceTree = "<group>"; };
+		40F1ECEC226810C30057CA91 /* ObjcJiebaWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjcJiebaWrapper.mm; sourceTree = "<group>"; };
+		40F1ECEE226815A40057CA91 /* SMSPredict.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSPredict.h; sourceTree = "<group>"; };
+		40F1ECEF226815A40057CA91 /* SMSPredict.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSPredict.m; sourceTree = "<group>"; };
 		5F3E297260BED1B375B574CC /* libPods-SMSSheep.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SMSSheep.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD95991EE6B2AC0A10CC2639 /* Pods-SMSSheep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMSSheep.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMSSheep/Pods-SMSSheep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,8 +130,10 @@
 			children = (
 				40F1ECAE22674F410057CA91 /* AppDelegate.h */,
 				40F1ECB022674F410057CA91 /* AppDelegate.m */,
-				40F1ECB722674FDE0057CA91 /* SMSHomeVC.h */,
-				40F1ECB822674FDE0057CA91 /* SMSHomeVC.m */,
+				40F1ECBA22680F1C0057CA91 /* PredictSMS.mlmodel */,
+				40F1ECE622680F1C0057CA91 /* feature.txt */,
+				40F1ECBB22680F1C0057CA91 /* Modules */,
+				40F1ECBE22680F1C0057CA91 /* Vendors */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -95,6 +144,86 @@
 				40F1ECB322674F420057CA91 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		40F1ECBB22680F1C0057CA91 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				40F1ECBC22680F1C0057CA91 /* SMSHomeVC.m */,
+				40F1ECBD22680F1C0057CA91 /* SMSHomeVC.h */,
+				40F1ECEE226815A40057CA91 /* SMSPredict.h */,
+				40F1ECEF226815A40057CA91 /* SMSPredict.m */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		40F1ECBE22680F1C0057CA91 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				40F1ECBF22680F1C0057CA91 /* iOSJieba */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		40F1ECBF22680F1C0057CA91 /* iOSJieba */ = {
+			isa = PBXGroup;
+			children = (
+				40F1ECC022680F1C0057CA91 /* iosjieba.bundle */,
+				40F1ECC122680F1C0057CA91 /* cppjieba */,
+				40F1ECEB226810C30057CA91 /* ObjcJiebaWrapper.h */,
+				40F1ECEC226810C30057CA91 /* ObjcJiebaWrapper.mm */,
+			);
+			path = iOSJieba;
+			sourceTree = "<group>";
+		};
+		40F1ECC122680F1C0057CA91 /* cppjieba */ = {
+			isa = PBXGroup;
+			children = (
+				40F1ECC222680F1C0057CA91 /* DictTrie.hpp */,
+				40F1ECC322680F1C0057CA91 /* Unicode.hpp */,
+				40F1ECC422680F1C0057CA91 /* PreFilter.hpp */,
+				40F1ECC522680F1C0057CA91 /* FullSegment.hpp */,
+				40F1ECC622680F1C0057CA91 /* MixSegment.hpp */,
+				40F1ECC722680F1C0057CA91 /* MPSegment.hpp */,
+				40F1ECC822680F1C0057CA91 /* KeywordExtractor.hpp */,
+				40F1ECC922680F1C0057CA91 /* Jieba.hpp */,
+				40F1ECCA22680F1C0057CA91 /* TextRankExtractor.hpp */,
+				40F1ECCB22680F1C0057CA91 /* PosTagger.hpp */,
+				40F1ECCC22680F1C0057CA91 /* Trie.hpp */,
+				40F1ECCD22680F1C0057CA91 /* limonp */,
+				40F1ECE122680F1C0057CA91 /* QuerySegment.hpp */,
+				40F1ECE222680F1C0057CA91 /* SegmentTagged.hpp */,
+				40F1ECE322680F1C0057CA91 /* HMMModel.hpp */,
+				40F1ECE422680F1C0057CA91 /* SegmentBase.hpp */,
+				40F1ECE522680F1C0057CA91 /* HMMSegment.hpp */,
+			);
+			path = cppjieba;
+			sourceTree = "<group>";
+		};
+		40F1ECCD22680F1C0057CA91 /* limonp */ = {
+			isa = PBXGroup;
+			children = (
+				40F1ECCE22680F1C0057CA91 /* ThreadPool.hpp */,
+				40F1ECCF22680F1C0057CA91 /* Colors.hpp */,
+				40F1ECD022680F1C0057CA91 /* StdExtension.hpp */,
+				40F1ECD122680F1C0057CA91 /* StringUtil.hpp */,
+				40F1ECD222680F1C0057CA91 /* LocalVector.hpp */,
+				40F1ECD322680F1C0057CA91 /* BlockingQueue.hpp */,
+				40F1ECD422680F1C0057CA91 /* Closure.hpp */,
+				40F1ECD522680F1C0057CA91 /* Config.hpp */,
+				40F1ECD622680F1C0057CA91 /* ForcePublic.hpp */,
+				40F1ECD722680F1C0057CA91 /* BoundedQueue.hpp */,
+				40F1ECD822680F1C0057CA91 /* ArgvContext.hpp */,
+				40F1ECD922680F1C0057CA91 /* Condition.hpp */,
+				40F1ECDA22680F1C0057CA91 /* Md5.hpp */,
+				40F1ECDB22680F1C0057CA91 /* Thread.hpp */,
+				40F1ECDC22680F1C0057CA91 /* MutexLock.hpp */,
+				40F1ECDD22680F1C0057CA91 /* FileLock.hpp */,
+				40F1ECDE22680F1C0057CA91 /* Logging.hpp */,
+				40F1ECDF22680F1C0057CA91 /* NonCopyable.hpp */,
+				40F1ECE022680F1C0057CA91 /* BoundedBlockingQueue.hpp */,
+			);
+			path = limonp;
 			sourceTree = "<group>";
 		};
 		DCD20C834B56F43A6F1EACD0 /* Frameworks */ = {
@@ -164,6 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				40F1ECB622674F420057CA91 /* Assets.xcassets in Resources */,
+				40F1ECE922680F1C0057CA91 /* iosjieba.bundle in Resources */,
+				40F1ECEA22680F1C0057CA91 /* feature.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,9 +330,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F1ECED226810C30057CA91 /* ObjcJiebaWrapper.mm in Sources */,
 				40F1ECA722674E450057CA91 /* main.m in Sources */,
+				40F1ECE722680F1C0057CA91 /* PredictSMS.mlmodel in Sources */,
+				40F1ECF0226815A40057CA91 /* SMSPredict.m in Sources */,
 				40F1ECB522674F420057CA91 /* AppDelegate.m in Sources */,
-				40F1ECB922674FDE0057CA91 /* SMSHomeVC.m in Sources */,
+				40F1ECE822680F1C0057CA91 /* SMSHomeVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +462,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SMSSheep/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,7 +481,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SMSSheep/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
