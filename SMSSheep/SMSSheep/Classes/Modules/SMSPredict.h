@@ -12,7 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SMSPredict : NSObject
 
-- (void)predictSMS:(NSString *)message;
+/**
+ 预测短信是否为垃圾短信
+
+ @param message 信息内容
+ @return 返回是否为垃圾短信
+ */
+- (BOOL)predictSMS:(NSString *)message;
 
 @end
 

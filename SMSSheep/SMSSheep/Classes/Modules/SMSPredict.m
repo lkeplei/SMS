@@ -18,12 +18,12 @@
 @end
 
 @implementation SMSPredict
-- (void)predictSMS:(NSString *)message {
+- (BOOL)predictSMS:(NSString *)message {
     NSError *error;
     PredictSMS *preSMS = [[PredictSMS alloc] init];
     PredictSMSOutput *output = [preSMS predictionFromMessage:[self getSMSMultiArray:message] error:&error];
     
-    NSLog(@"out = %lld \n error = %@", output.predict, error);
+    return output.predict;
 }
 
 - (MLMultiArray *)getSMSMultiArray:(NSString *)msg {

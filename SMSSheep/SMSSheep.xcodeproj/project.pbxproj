@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		04D0C83C9CA997E4AC5C4DDD /* libPods-SMSSheep.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3E297260BED1B375B574CC /* libPods-SMSSheep.a */; };
+		4014F3E52269D75400B27A1D /* SMSPredict.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECEF226815A40057CA91 /* SMSPredict.m */; };
+		4014F3E62269D76500B27A1D /* SMSHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECBC22680F1C0057CA91 /* SMSHomeVC.m */; };
+		4014F3E72269D78600B27A1D /* PredictSMS.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECBA22680F1C0057CA91 /* PredictSMS.mlmodel */; };
+		4014F3E82269D79A00B27A1D /* ObjcJiebaWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECEC226810C30057CA91 /* ObjcJiebaWrapper.mm */; };
+		4014F3E92269D99800B27A1D /* feature.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40F1ECE622680F1C0057CA91 /* feature.txt */; };
 		40F1ECA722674E450057CA91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECA622674E450057CA91 /* main.m */; };
 		40F1ECB522674F420057CA91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECB022674F410057CA91 /* AppDelegate.m */; };
 		40F1ECB622674F420057CA91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40F1ECB322674F420057CA91 /* Assets.xcassets */; };
@@ -17,10 +22,37 @@
 		40F1ECEA22680F1C0057CA91 /* feature.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40F1ECE622680F1C0057CA91 /* feature.txt */; };
 		40F1ECED226810C30057CA91 /* ObjcJiebaWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECEC226810C30057CA91 /* ObjcJiebaWrapper.mm */; };
 		40F1ECF0226815A40057CA91 /* SMSPredict.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECEF226815A40057CA91 /* SMSPredict.m */; };
+		40F1ECF922681C2A0057CA91 /* MessageFilterExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECF822681C2A0057CA91 /* MessageFilterExtension.m */; };
+		40F1ECFD22681C2A0057CA91 /* SMSFilter.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 40F1ECF522681C2A0057CA91 /* SMSFilter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40F1ECFB22681C2A0057CA91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40F1EC8C22674E440057CA91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40F1ECF422681C2A0057CA91;
+			remoteInfo = SMSFilter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		40F1ED0122681C2A0057CA91 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				40F1ECFD22681C2A0057CA91 /* SMSFilter.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00ED0606A50F797F7169DB78 /* Pods-SMSSheep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMSSheep.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMSSheep/Pods-SMSSheep.debug.xcconfig"; sourceTree = "<group>"; };
+		4014F3E32269AC6B00B27A1D /* SMSSheep.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SMSSheep.entitlements; sourceTree = "<group>"; };
 		40F1EC9422674E440057CA91 /* SMSSheep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMSSheep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40F1ECA522674E450057CA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40F1ECA622674E450057CA91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -71,6 +103,11 @@
 		40F1ECEC226810C30057CA91 /* ObjcJiebaWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjcJiebaWrapper.mm; sourceTree = "<group>"; };
 		40F1ECEE226815A40057CA91 /* SMSPredict.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSPredict.h; sourceTree = "<group>"; };
 		40F1ECEF226815A40057CA91 /* SMSPredict.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSPredict.m; sourceTree = "<group>"; };
+		40F1ECF522681C2A0057CA91 /* SMSFilter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SMSFilter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F1ECF722681C2A0057CA91 /* MessageFilterExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageFilterExtension.h; sourceTree = "<group>"; };
+		40F1ECF822681C2A0057CA91 /* MessageFilterExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageFilterExtension.m; sourceTree = "<group>"; };
+		40F1ECFA22681C2A0057CA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40F1ED02226823790057CA91 /* SMSFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SMSFilter.entitlements; sourceTree = "<group>"; };
 		5F3E297260BED1B375B574CC /* libPods-SMSSheep.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SMSSheep.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD95991EE6B2AC0A10CC2639 /* Pods-SMSSheep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMSSheep.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMSSheep/Pods-SMSSheep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +118,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D0C83C9CA997E4AC5C4DDD /* libPods-SMSSheep.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F1ECF222681C2A0057CA91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				40F1EC9622674E440057CA91 /* SMSSheep */,
+				40F1ECF622681C2A0057CA91 /* SMSFilter */,
 				40F1EC9522674E440057CA91 /* Products */,
 				3EE3FF4DB595B0DB7967C809 /* Pods */,
 				DCD20C834B56F43A6F1EACD0 /* Frameworks */,
@@ -110,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				40F1EC9422674E440057CA91 /* SMSSheep.app */,
+				40F1ECF522681C2A0057CA91 /* SMSFilter.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +163,7 @@
 		40F1EC9622674E440057CA91 /* SMSSheep */ = {
 			isa = PBXGroup;
 			children = (
+				4014F3E32269AC6B00B27A1D /* SMSSheep.entitlements */,
 				40F1ECAD22674F410057CA91 /* Classes */,
 				40F1ECB222674F420057CA91 /* Resources */,
 				40F1ECA522674E450057CA91 /* Info.plist */,
@@ -226,6 +273,17 @@
 			path = limonp;
 			sourceTree = "<group>";
 		};
+		40F1ECF622681C2A0057CA91 /* SMSFilter */ = {
+			isa = PBXGroup;
+			children = (
+				40F1ED02226823790057CA91 /* SMSFilter.entitlements */,
+				40F1ECF722681C2A0057CA91 /* MessageFilterExtension.h */,
+				40F1ECF822681C2A0057CA91 /* MessageFilterExtension.m */,
+				40F1ECFA22681C2A0057CA91 /* Info.plist */,
+			);
+			path = SMSFilter;
+			sourceTree = "<group>";
+		};
 		DCD20C834B56F43A6F1EACD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,15 +303,34 @@
 				40F1EC9022674E440057CA91 /* Sources */,
 				40F1EC9122674E440057CA91 /* Frameworks */,
 				40F1EC9222674E440057CA91 /* Resources */,
+				40F1ED0122681C2A0057CA91 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				40F1ECFC22681C2A0057CA91 /* PBXTargetDependency */,
 			);
 			name = SMSSheep;
 			productName = SMSSheep;
 			productReference = 40F1EC9422674E440057CA91 /* SMSSheep.app */;
 			productType = "com.apple.product-type.application";
+		};
+		40F1ECF422681C2A0057CA91 /* SMSFilter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40F1ECFE22681C2A0057CA91 /* Build configuration list for PBXNativeTarget "SMSFilter" */;
+			buildPhases = (
+				40F1ECF122681C2A0057CA91 /* Sources */,
+				40F1ECF222681C2A0057CA91 /* Frameworks */,
+				40F1ECF322681C2A0057CA91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMSFilter;
+			productName = SMSFilter;
+			productReference = 40F1ECF522681C2A0057CA91 /* SMSFilter.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -266,6 +343,19 @@
 				TargetAttributes = {
 					40F1EC9322674E440057CA91 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					40F1ECF422681C2A0057CA91 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -283,6 +373,7 @@
 			projectRoot = "";
 			targets = (
 				40F1EC9322674E440057CA91 /* SMSSheep */,
+				40F1ECF422681C2A0057CA91 /* SMSFilter */,
 			);
 		};
 /* End PBXProject section */
@@ -295,6 +386,14 @@
 				40F1ECB622674F420057CA91 /* Assets.xcassets in Resources */,
 				40F1ECE922680F1C0057CA91 /* iosjieba.bundle in Resources */,
 				40F1ECEA22680F1C0057CA91 /* feature.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F1ECF322681C2A0057CA91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4014F3E92269D99800B27A1D /* feature.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +438,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		40F1ECF122681C2A0057CA91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4014F3E72269D78600B27A1D /* PredictSMS.mlmodel in Sources */,
+				4014F3E82269D79A00B27A1D /* ObjcJiebaWrapper.mm in Sources */,
+				4014F3E52269D75400B27A1D /* SMSPredict.m in Sources */,
+				40F1ECF922681C2A0057CA91 /* MessageFilterExtension.m in Sources */,
+				4014F3E62269D76500B27A1D /* SMSHomeVC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40F1ECFC22681C2A0057CA91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40F1ECF422681C2A0057CA91 /* SMSFilter */;
+			targetProxy = 40F1ECFB22681C2A0057CA91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		40F1ECA822674E450057CA91 /* Debug */ = {
@@ -460,15 +579,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = SMSSheep/SMSSheep.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VPE4QH4M75;
 				INFOPLIST_FILE = SMSSheep/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ken.SMSSheep;
+				PRODUCT_BUNDLE_IDENTIFIER = com.axd.SMS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "sms-dev";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -479,15 +601,60 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = SMSSheep/SMSSheep.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VPE4QH4M75;
 				INFOPLIST_FILE = SMSSheep/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ken.SMSSheep;
+				PRODUCT_BUNDLE_IDENTIFIER = com.axd.SMS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "sms-dev";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		40F1ECFF22681C2A0057CA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SMSFilter/SMSFilter.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VPE4QH4M75;
+				INFOPLIST_FILE = SMSFilter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.axd.SMS.SMSFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "smsfilter-dev";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		40F1ED0022681C2A0057CA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SMSFilter/SMSFilter.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VPE4QH4M75;
+				INFOPLIST_FILE = SMSFilter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.axd.SMS.SMSFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "smsfilter-dev";
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -509,6 +676,15 @@
 			buildConfigurations = (
 				40F1ECAB22674E450057CA91 /* Debug */,
 				40F1ECAC22674E450057CA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40F1ECFE22681C2A0057CA91 /* Build configuration list for PBXNativeTarget "SMSFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F1ECFF22681C2A0057CA91 /* Debug */,
+				40F1ED0022681C2A0057CA91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
