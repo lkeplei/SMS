@@ -1,10 +1,11 @@
 # SMS
 利用 sklearn 自建模型进行的一个短信拦截应用
 
-目标：希望可以达到在iOS设备上拦截垃圾短信
+## 目标
+希望可以达到在iOS设备上拦截垃圾短信
 
-目前进展：
-1. 完成在30W+的训练数据集上准确率0.99+的准确率
+## 目前进展：
+1. 完成在30W+的训练数据集上准确率0.99+
 2. 已通过coremltools将sklearn的数据模型转换为coreml可以识别的模型
 3. 在iOS的项目已可以正常使用并通过模型区分短信类别
 4. 短信拦截的扩展设置已完成
@@ -43,7 +44,7 @@
     
     
     # 读取数据
-    data = pd.read_csv('./python练习/study/example-1/data/80w.txt', sep='\t')
+    data = pd.read_csv('./data/80w.txt', sep='\t')
     data = data.drop('id', axis=1)      # 删除无用的列
     
     x_predict = data['ret']
@@ -61,12 +62,12 @@
     
     print(cv.get_feature_names())
     
-    text_save('./python练习/study/example-1/feature.txt', cv.get_feature_names())
+    text_save('./data/feature.txt', cv.get_feature_names())
     
     model = LinearSVC()
     model.fit(x_train, y_train)
     
-    print('The Accuracy of Naive Bayes Classifier is:', model.score(x_test, y_test))
+    print('预测准备率:', model.score(x_test, y_test))
     
     # 转换成 coreml 可以识别的模型
     coreml_model = coremltools.converters.sklearn.convert(model, 'message', 'predict')
@@ -78,4 +79,4 @@
     coreml_model.input_description['message'] = "内容"
     coreml_model.output_description['predict'] = "预计的结果"
     
-    coreml_model.save('./python练习/study/example-1/PredictSMS.mlmodel')
+    coreml_model.save('./data/PredictSMS.mlmodel')
