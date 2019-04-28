@@ -11,8 +11,6 @@
 
 @interface MessageFilterExtension () <ILMessageFilterQueryHandling>
 
-@property (nonatomic, strong) SMSPredict *predict;
-
 @end
 
 @implementation MessageFilterExtension
@@ -60,9 +58,11 @@
     NSString *msg = queryRequest.messageBody;
     NSLog(@"msg = %@", msg);
     
-    if ([self.predict predictSMS:msg]) {
+    if ([SMSPredict predictSMS:msg]) {
+        NSLog(@"predict = yes");
         return ILMessageFilterActionFilter;
     }
+    NSLog(@"predict = no");
     return ILMessageFilterActionNone;
 }
 
@@ -72,11 +72,4 @@
     return ILMessageFilterActionNone;
 }
 
-#pragma mark - getter setter
-- (SMSPredict *)predict {
-    if (_predict == nil) {
-        _predict = [[SMSPredict alloc] init];
-    }
-    return _predict;
-}
 @end

@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param message 信息内容
  @return 返回是否为垃圾短信
  */
-- (BOOL)predictSMS:(NSString *)message;
++ (BOOL)predictSMS:(NSString *)message;
 
 @end
 

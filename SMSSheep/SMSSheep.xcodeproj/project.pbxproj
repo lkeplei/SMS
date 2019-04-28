@@ -13,6 +13,8 @@
 		4014F3E72269D78600B27A1D /* PredictSMS.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECBA22680F1C0057CA91 /* PredictSMS.mlmodel */; };
 		4014F3E82269D79A00B27A1D /* ObjcJiebaWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECEC226810C30057CA91 /* ObjcJiebaWrapper.mm */; };
 		4014F3E92269D99800B27A1D /* feature.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40F1ECE622680F1C0057CA91 /* feature.txt */; };
+		407E11B5226D9CF000669851 /* sms_svm.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 407E11B4226D9CEF00669851 /* sms_svm.mlmodel */; };
+		407E11B6226D9CF000669851 /* sms_svm.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 407E11B4226D9CEF00669851 /* sms_svm.mlmodel */; };
 		40F1ECA722674E450057CA91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECA622674E450057CA91 /* main.m */; };
 		40F1ECB522674F420057CA91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F1ECB022674F410057CA91 /* AppDelegate.m */; };
 		40F1ECB622674F420057CA91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40F1ECB322674F420057CA91 /* Assets.xcassets */; };
@@ -53,6 +55,7 @@
 /* Begin PBXFileReference section */
 		00ED0606A50F797F7169DB78 /* Pods-SMSSheep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMSSheep.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMSSheep/Pods-SMSSheep.debug.xcconfig"; sourceTree = "<group>"; };
 		4014F3E32269AC6B00B27A1D /* SMSSheep.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SMSSheep.entitlements; sourceTree = "<group>"; };
+		407E11B4226D9CEF00669851 /* sms_svm.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = sms_svm.mlmodel; sourceTree = "<group>"; };
 		40F1EC9422674E440057CA91 /* SMSSheep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMSSheep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40F1ECA522674E450057CA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40F1ECA622674E450057CA91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -175,6 +178,7 @@
 		40F1ECAD22674F410057CA91 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				407E11B4226D9CEF00669851 /* sms_svm.mlmodel */,
 				40F1ECAE22674F410057CA91 /* AppDelegate.h */,
 				40F1ECB022674F410057CA91 /* AppDelegate.m */,
 				40F1ECBA22680F1C0057CA91 /* PredictSMS.mlmodel */,
@@ -429,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				407E11B5226D9CF000669851 /* sms_svm.mlmodel in Sources */,
 				40F1ECED226810C30057CA91 /* ObjcJiebaWrapper.mm in Sources */,
 				40F1ECA722674E450057CA91 /* main.m in Sources */,
 				40F1ECE722680F1C0057CA91 /* PredictSMS.mlmodel in Sources */,
@@ -443,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4014F3E72269D78600B27A1D /* PredictSMS.mlmodel in Sources */,
+				407E11B6226D9CF000669851 /* sms_svm.mlmodel in Sources */,
 				4014F3E82269D79A00B27A1D /* ObjcJiebaWrapper.mm in Sources */,
 				4014F3E52269D75400B27A1D /* SMSPredict.m in Sources */,
 				40F1ECF922681C2A0057CA91 /* MessageFilterExtension.m in Sources */,

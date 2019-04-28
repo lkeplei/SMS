@@ -18,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if ([SMSPredict predictSMS:@"hello,ni mei"]) {
+        NSLog(@"predict = yes");
+    } else {
+        NSLog(@"predict = no");
+    }
 }
 
 @end

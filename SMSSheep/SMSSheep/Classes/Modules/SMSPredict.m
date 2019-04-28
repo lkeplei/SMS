@@ -10,20 +10,50 @@
 #import "PredictSMS.h"
 #import "ObjcJiebaWrapper.h"
 
+
+#import "sms_svm.h"
+
 @interface SMSPredict ()
 
 @property (nonatomic, strong) ObjcJiebaWrapper *jiebaWrapper;
 @property (nonatomic, strong) NSArray *featureNameList;
+@property (nonatomic, strong) PredictSMS *preSMS;
 
 @end
 
 @implementation SMSPredict
-- (BOOL)predictSMS:(NSString *)message {
-    NSError *error;
-    PredictSMS *preSMS = [[PredictSMS alloc] init];
-    PredictSMSOutput *output = [preSMS predictionFromMessage:[self getSMSMultiArray:message] error:&error];
+
++ (nonnull instancetype)sharedInstance {
+    static SMSPredict *router;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        router = [[SMSPredict alloc] init];
+    });
+    return router;
+}
+
++ (BOOL)predictSMS:(NSString *)message {
+    sms_svm *svm = [[sms_svm alloc] init];
     
-    return output.predict;
+    NSError *error;
+    sms_svmOutput *output = [svm predictionFromMessage:[[SMSPredict sharedInstance] getSMSMultiArray:message] error:&error];
+    
+    if (error) {
+        NSLog(@"predict sms error = %@", error);
+    }
+    
+    return output.spam_or_not;
+    
+    
+    
+//    NSError *error;
+//    PredictSMSOutput *output = [[SMSPredict sharedInstance].preSMS predictionFromMessage:[[SMSPredict sharedInstance] getSMSMultiArray:message] error:&error];
+//
+//    if (error) {
+//        NSLog(@"predict sms error = %@", error);
+//    }
+//
+//    return output.predict;
 }
 
 - (MLMultiArray *)getSMSMultiArray:(NSString *)msg {
@@ -93,5 +123,12 @@
         _jiebaWrapper = [[ObjcJiebaWrapper alloc] init];
     }
     return _jiebaWrapper;
+}
+
+- (PredictSMS *)preSMS {
+    if (_preSMS == nil) {
+        _preSMS = [[PredictSMS alloc] init];
+    }
+    return _preSMS;
 }
 @end
